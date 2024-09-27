@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Từ 1 Đến n</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính Tổng Từ 1 Đến n</h1>
+
+    <div>
+        
+        <input type="number" id="nFor" placeholder="Nhập n" />
+        <button onclick="tinhTongFor()">Tính Tổng (for)</button>
+        <div class="result" id="resultFor"></div>
+    </div>
+
+    
+
+    <script>
+        // Tính tổng từ 1 đến n sử dụng vòng lặp for
+        function tinhTongFor() {
+            let n = parseInt(document.getElementById('nFor').value);
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            document.getElementById('resultFor').innerHTML = 'Tổng từ 1 đến ' + n + ' là: ' + sum;
+        }
+
+
+    </script>
+</body>
+</html>
